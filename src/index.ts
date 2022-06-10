@@ -2,20 +2,29 @@ let dimensionArreglo: number = Number(
   prompt("Ingrese la cantidad de celdas deseadas")
 );
 let indice: number;
-let nombrePersonas: string[] = new Array(dimensionArreglo);
+let indiceInv: number;
+let arrayUsuario: number[] = new Array(dimensionArreglo);
 
 for (indice = 0; indice < dimensionArreglo; indice++) {
-  nombrePersonas[indice] = String(
+  arrayUsuario[indice] = Number(
     prompt("Ingrese el nombre deseado en la posición " + (indice + 1))
   );
 }
-
 for (indice = 0; indice < dimensionArreglo; indice++) {
   console.log(
-    "El nombre ingresado en la posición ",
+    "El número ingresado en la posición ",
     indice,
     " es ",
-    nombrePersonas[indice]
+    arrayUsuario[indice]
+  );
+}
+
+for (indiceInv = dimensionArreglo - 1; indiceInv >= 0; indiceInv--) {
+  console.log(
+    "El número ingresado en la posición ",
+    indiceInv,
+    " es ",
+    arrayUsuario[indiceInv]
   );
 }
 
